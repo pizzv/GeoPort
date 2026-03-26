@@ -1,0 +1,169 @@
+:root {
+  font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: #2b2b2b;
+  background: #fffaf8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 250, 248, 0.95);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #f1dfd8;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #5a4742;
+  font-weight: 500;
+}
+
+.hero {
+  text-align: center;
+  padding: 5rem 1.5rem 4rem;
+  background: linear-gradient(180deg, #fef2ee 0%, #fffaf8 100%);
+}
+
+.hero h1 {
+  max-width: 680px;
+  margin: 0 auto 1.5rem;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  line-height: 1.2;
+}
+
+.shop-button {
+  display: inline-block;
+  text-decoration: none;
+  background: #2b2b2b;
+  color: #ffffff;
+  padding: 0.85rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.products,
+.about,
+.contact {
+  padding: 3rem 1.5rem;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.product-card {
+  background: #ffffff;
+  border: 1px solid #f2e3dd;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 8px 22px rgba(43, 43, 43, 0.04);
+}
+
+.image-placeholder {
+  height: 140px;
+  border-radius: 12px;
+  background: #f8e6e0;
+  color: #7d6360;
+  display: grid;
+  place-items: center;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.product-card h3 {
+  margin: 0;
+}
+
+.price {
+  color: #7d6360;
+}
+
+.product-card button,
+.contact button {
+  border: none;
+  background: #ff8f70;
+  color: white;
+  border-radius: 999px;
+  padding: 0.6rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.about p {
+  max-width: 720px;
+  line-height: 1.7;
+}
+
+.contact form {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.contact input {
+  flex: 1;
+  min-width: 220px;
+  padding: 0.7rem 0.9rem;
+  border-radius: 10px;
+  border: 1px solid #dec5bd;
+  font-size: 1rem;
+}
+
+@media (max-width: 860px) {
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .navbar {
+    padding: 1rem;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
