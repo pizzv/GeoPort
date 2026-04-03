@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SharpBlend Barbershop</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav container">
+        <div class="logo">SharpBlend</div>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#booking">Book</a></li>
+        </ul>
+      </nav>
+      <div class="hero-content container">
+        <h1>Classic cuts. Modern style.</h1>
+        <p>
+          Your neighborhood barber shop for fades, beard trims, and hot towel
+          shaves.
+        </p>
+        <a class="btn" href="#booking">Book an Appointment</a>
+      </div>
+    </header>
+
+    <main>
+      <section id="services" class="container section">
+        <h2>Popular Services</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Signature Fade</h3>
+            <p>Precision skin fade with style finish.</p>
+            <span>$35 · 45 min</span>
+          </article>
+          <article class="card">
+            <h3>Beard Grooming</h3>
+            <p>Shape, line-up, and conditioning treatment.</p>
+            <span>$22 · 25 min</span>
+          </article>
+          <article class="card">
+            <h3>Cut + Beard Combo</h3>
+            <p>Full service refresh to keep you sharp.</p>
+            <span>$50 · 60 min</span>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" class="section dark">
+        <div class="container about-grid">
+          <div>
+            <h2>Built on community</h2>
+            <p>
+              We are a team of licensed barbers focused on quality craft and a
+              welcoming vibe. Walk-ins are welcome, appointments recommended.
+            </p>
+          </div>
+          <ul>
+            <li>📍 123 Main St, Your City</li>
+            <li>🕒 Mon–Sat: 9:00 AM – 7:00 PM</li>
+            <li>📞 (555) 123-4567</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="booking" class="container section">
+        <h2>Quick Booking</h2>
+        <form id="booking-form" class="booking-form">
+          <label>
+            Name
+            <input type="text" id="name" required />
+          </label>
+          <label>
+            Service
+            <select id="service" required>
+              <option value="">Select a service</option>
+              <option>Signature Fade</option>
+              <option>Beard Grooming</option>
+              <option>Cut + Beard Combo</option>
+            </select>
+          </label>
+          <label>
+            Date
+            <input type="date" id="date" required />
+          </label>
+          <button type="submit" class="btn">Reserve Spot</button>
+        </form>
+        <p id="confirmation" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© <span id="year"></span> SharpBlend Barbershop</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
